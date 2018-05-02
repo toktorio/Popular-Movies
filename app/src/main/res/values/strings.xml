@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Pop Movies</string>
+    <string name="app_name_full">Popular Movies</string>
+
+    <string name="action_sort_by">Sort By</string>
+    <string name="action_about">About</string>
+
+    <string name="content_desc_movie_poster">Movie Poster</string>
+    <string name="content_desc_movie_backdrop">Movie Backdrop</string>
+    <string name="content_desc_cast_poster">Cast Poster</string>
+    <string name="content_desc_trailer_poster">Trailer Poster</string>
+    <string name="content_desc_app_icon">Popular Movies App Icon</string>
+    <string name="content_desc_tmdb_logo">TMDb logo</string>
+
+    <string name="label_movie_details">Movie Details</string>
+    <string name="label_movie_review">Movie Review</string>
+    <string name="label_about">About</string>
+    <string name="label_sort_by">Sort By</string>
+    <string name="label_refresh">Refresh</string>
+    <string name="label_try_again">Try Again</string>
+    <string name="label_most_popular">Most Popular</string>
+    <string name="label_top_rated">Top Rated</string>
+    <string name="label_now_playing">Now Playing</string>
+    <string name="label_coming_soon">Coming Soon</string>
+    <string name="label_favorites">Favorites</string>
+
+    <string name="message_network_unavailable">You are not connected to internet.</string>
+    <string name="message_saved_to_favorites">Successfully saved movie to favorites.</string>
+    <string name="message_removed_from_favorites">Successfully removed movie from favorites.</string>
+
+    <string name="string_format_runtime">%s min</string>
+    <string name="string_format_review_author">Review by %s:</string>
+    <string name="string_format_app_version">Version %s</string>
+
+    <string name="text_movies_empty">No movies found</string>
+    <string name="text_movie_details_empty">Unable to fetch movie details</string>
+    <string name="text_overview_label">Overview</string>
+    <string name="text_casts_label">Casts</string>
+    <string name="text_trailers_label">Trailers</string>
+    <string name="text_reviews_label">Reviews</string>
+    <string name="text_app_author">by Timotius Oktorio</string>
+    <string name="text_app_description">Simple Android app that can help you discover popular, top rated, now playing, and upcoming movies.\n\nThis app uses the TMDb API but is not endorsed or certified by TMDb</string>
+
+</resources>

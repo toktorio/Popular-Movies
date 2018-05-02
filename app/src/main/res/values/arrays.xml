@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sort_by_options">
+        <item>@string/label_most_popular</item>
+        <item>@string/label_top_rated</item>
+        <item>@string/label_now_playing</item>
+        <item>@string/label_coming_soon</item>
+        <item>@string/label_favorites</item>
+    </string-array>
+
+</resources>

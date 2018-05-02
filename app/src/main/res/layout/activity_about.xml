@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.about.AboutActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:contentDescription="@string/content_desc_app_icon"
+                android:src="@drawable/img_app_logo" />
+
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/app_name_full" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_app_author" />
+
+            <TextView
+                android:id="@+id/app_version_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Version: 2.3.1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:text="@string/text_app_description" />
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/content_desc_tmdb_logo"
+                android:src="@drawable/img_tmdb_logo" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
