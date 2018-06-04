@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.timotiusoktorio.popularmovies.R;
 import com.timotiusoktorio.popularmovies.data.model.Movie;
+import com.timotiusoktorio.popularmovies.util.GridDividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,7 +89,8 @@ public class MoviesFragment extends Fragment implements MoviesContract.View {
         });
 
         mRecyclerView.setAdapter(mAdapter);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), getResources().getInteger(R.integer.total_columns)));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(requireContext(), getResources().getInteger(R.integer.total_columns)));
+        mRecyclerView.addItemDecoration(new GridDividerItemDecoration(requireContext(), R.dimen.movies_rv_grid_item_offset));
         mRecyclerView.setHasFixedSize(true);
 
         TextView emptyTextView = view.findViewById(R.id.empty_text_view);
