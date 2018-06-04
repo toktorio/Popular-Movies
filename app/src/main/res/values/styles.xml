@@ -8,6 +8,8 @@
         <item name="android:windowBackground">@color/colorWindow</item>
     </style>
 
+    <style name="AppTheme.DetailsActivity" />
+
     <style name="LabelTextView" parent="@android:style/Widget.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

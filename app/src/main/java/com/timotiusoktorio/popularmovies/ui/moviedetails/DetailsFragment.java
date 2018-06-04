@@ -115,6 +115,7 @@ public class DetailsFragment extends Fragment implements DetailsContract.View, V
             ActionBar actionBar = ((AppCompatActivity) requireActivity()).getSupportActionBar();
             if (actionBar != null) {
                 actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setDisplayShowTitleEnabled(false);
             }
         }
 
@@ -174,6 +175,12 @@ public class DetailsFragment extends Fragment implements DetailsContract.View, V
     public void showMovieDetails(Movie movie) {
         String backdropUrl = MovieApiContract.TMDB_MOVIE_BACKDROP_URL + movie.getBackdropPath();
         Picasso.get().load(backdropUrl).into(mBackdropImageView);
+
+        ActionBar actionBar = ((AppCompatActivity) requireActivity()).getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle(movie.getTitle());
+            actionBar.setDisplayShowTitleEnabled(true);
+        }
 
         mTitleTextView.setText(movie.getTitle());
         mReleaseDateTextView.setText(movie.getReleaseDate());

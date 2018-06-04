@@ -22,7 +22,8 @@
         <activity
             android:name=".ui.moviedetails.DetailsActivity"
             android:label="@string/label_movie_details"
-            android:parentActivityName=".ui.movies.MoviesActivity" />
+            android:parentActivityName=".ui.movies.MoviesActivity"
+            android:theme="@style/AppTheme.DetailsActivity" />
 
         <activity
             android:name=".ui.review.ReviewActivity"
