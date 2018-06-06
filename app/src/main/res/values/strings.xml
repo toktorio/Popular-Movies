@@ -6,6 +6,7 @@
 
     <string name="action_sort_by">Sort By</string>
     <string name="action_about">About</string>
+    <string name="action_share">Share</string>
 
     <string name="content_desc_movie_poster">Movie Poster</string>
     <string name="content_desc_movie_backdrop">Movie Backdrop</string>
@@ -33,6 +34,7 @@
     <string name="string_format_runtime">%s min</string>
     <string name="string_format_review_author">Review by %s:</string>
     <string name="string_format_app_version">Version %s</string>
+    <string name="string_format_share_intent">Checkout the new %s movie trailer: %s</string>
 
     <string name="text_movies_empty">No movies found</string>
     <string name="text_movie_details_empty">Unable to fetch movie details</string>

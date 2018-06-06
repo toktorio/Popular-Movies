@@ -14,6 +14,7 @@ import com.timotiusoktorio.popularmovies.data.model.Review;
 import com.timotiusoktorio.popularmovies.data.model.Trailer;
 import com.timotiusoktorio.popularmovies.data.source.MovieDetailsLoader;
 import com.timotiusoktorio.popularmovies.data.source.local.MovieDbHelper;
+import com.timotiusoktorio.popularmovies.data.source.remote.MovieApiContract;
 
 import java.util.List;
 
@@ -77,6 +78,7 @@ class DetailsPresenter implements DetailsContract.Presenter, LoaderManager.Loade
             mIsMoviePersisted = mDbHelper.isMovieSaved(mMovieId);
             mView.showMovieDetails(movie);
             mView.updateFavoriteFabIcon(getFavoriteFabIcon());
+            mView.updateShareIntent(buildShareIntentMessage());
 
             List<Cast> casts = movie.getCasts();
             if (casts != null && !casts.isEmpty()) {
@@ -95,6 +97,13 @@ class DetailsPresenter implements DetailsContract.Presenter, LoaderManager.Loade
         } else {
             mView.showEmptyView();
         }
+    }
+
+    @NonNull
+    private String buildShareIntentMessage() {
+        Trailer firstTrailer = mMovie.getTrailers().get(0);
+        String trailerYoutubeUrl = MovieApiContract.YOUTUBE_VIDEO_URL + firstTrailer.getKey();
+        return mContext.getString(R.string.string_format_share_intent, mMovie.getTitle(), trailerYoutubeUrl);
     }
 
     @Override

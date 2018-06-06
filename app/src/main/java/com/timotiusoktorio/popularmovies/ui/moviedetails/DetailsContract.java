@@ -21,6 +21,8 @@ interface DetailsContract {
 
         void showMovieTrailers(List<Trailer> trailers);
 
+        void updateShareIntent(String message);
+
         void showMovieReviews(List<Review> reviews);
 
         void showEmptyView();

@@ -1,12 +1,14 @@
 package com.timotiusoktorio.popularmovies.ui.moviedetails;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,9 +16,12 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.ShareActionProvider;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,6 +72,7 @@ public class DetailsFragment extends Fragment implements DetailsContract.View, V
     private FloatingActionButton mFavoriteFab;
     private ViewGroup mEmptyView;
     private ProgressBar mProgressBar;
+    private ShareActionProvider mShareActionProvider;
 
     public static DetailsFragment newInstance(long movieId) {
         Log.d(TAG, "newInstance: movieId: " + movieId);
@@ -155,6 +161,15 @@ public class DetailsFragment extends Fragment implements DetailsContract.View, V
     }
 
     @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_details, menu);
+
+        MenuItem shareMenuItem = menu.findItem(R.id.action_share);
+        mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareMenuItem);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             requireActivity().finish();
@@ -216,6 +231,14 @@ public class DetailsFragment extends Fragment implements DetailsContract.View, V
         mTrailersRecyclerView.setHasFixedSize(true);
         mTrailersRecyclerView.setNestedScrollingEnabled(false);
         mTrailersContainer.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void updateShareIntent(String message) {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, message);
+        mShareActionProvider.setShareIntent(shareIntent);
     }
 
     @Override
