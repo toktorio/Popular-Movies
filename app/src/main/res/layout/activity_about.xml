@@ -33,20 +33,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/text_app_author" />
+                android:text="@string/text_app_author"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/app_version_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Version: 2.3.1" />
+                android:textSize="16sp"
+                tools:text="Version: 1.0.0" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/activity_horizontal_margin"
                 android:gravity="center"
-                android:text="@string/text_app_description" />
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/text_app_description"
+                android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="160dp"

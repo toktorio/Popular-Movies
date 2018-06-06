@@ -26,6 +26,7 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="4dp"
                 android:drawableStart="@drawable/ic_calendar"
+                android:textSize="16sp"
                 tools:text="2015-06-12" />
 
             <TextView
@@ -35,6 +36,7 @@
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:drawablePadding="4dp"
                 android:drawableStart="@drawable/ic_clock"
+                android:textSize="16sp"
                 tools:text="132 min" />
 
         </LinearLayout>
@@ -43,7 +45,8 @@
             android:id="@+id/genres_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="12dp"
+            android:textSize="16sp"
             tools:text="Genres: Action, Adventure, Thriller" />
 
         <RatingBar
